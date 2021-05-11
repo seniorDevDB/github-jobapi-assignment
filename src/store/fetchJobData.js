@@ -7,6 +7,7 @@ function fetchJobData(data) {
         const url = process.env.REACT_APP_API_URL;
         console.log("url", url)
         axios.get(url, {
+            headers: { 'Access-Control-Allow-Origin': '*'},
             pageNumber: data.pageNumber
         }).then(res => {
             console.log("ressss", res.data)

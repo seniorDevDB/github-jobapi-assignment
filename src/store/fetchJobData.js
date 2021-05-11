@@ -9,6 +9,9 @@ function fetchJobData(data) {
         console.log("url", url)
         axios.get(url, {
             // pageNumber: data.pageNumber
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            }
         }).then(res => {
             console.log("ressss", res.data)
             dispatch(fetchJobDataSuccess(res.data))

@@ -39,7 +39,7 @@ class JobDetail extends Component {
                 <div className="job-detail-page">
                     <div className="job-company-detail-section">
                         <div className="job-company-logo">
-                            <img src={job_data.company_logo}></img>
+                            <img src={job_data.company_logo} alt={job_data.company}></img>
                         </div>
                         <div className="job-company-title-section">
                             <h1>{job_data.company}</h1>

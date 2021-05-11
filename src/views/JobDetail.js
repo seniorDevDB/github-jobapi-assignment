@@ -6,8 +6,6 @@ import 'moment-timezone';
 
 import fetchJobData from '../store/fetchJobData';
 
-import Button from 'react-bootstrap/Button';
-
 class JobDetail extends Component {
 
     constructor(props) {

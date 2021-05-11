@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { GET } from '../api/api';
 import {fetchJobDataPending, fetchJobDataSuccess, fetchJobDataFailed} from './reducers/action';
 
 function fetchJobData(data) {

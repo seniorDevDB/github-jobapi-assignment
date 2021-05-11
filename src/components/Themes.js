@@ -5,7 +5,7 @@ export const lightTheme = {
     lightBlue: '#19212D',
     background: '#F2F2F2',
     cardBack: "white",
-    cardColor: "black"
+    cardColor: "black",
 }
 
 export const darkTheme = {
@@ -15,5 +15,5 @@ export const darkTheme = {
     darkBlue: '#131822',
     background: '#151b28',
     cardBack: "#18202d",
-    cardColor: "white"
+    cardColor: "white",
 }

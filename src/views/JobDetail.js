@@ -32,10 +32,6 @@ class JobDetail extends Component {
 
     }
 
-    handleCompanySite = (url) => {
-        // window.location.href=url
-    }
-
     render() {
         console.log("HIHI", this.props.jobData, this.state.jobIndex);
         const job_data = this.props.jobData[this.state.jobIndex]
@@ -51,18 +47,21 @@ class JobDetail extends Component {
                             <h1>{job_data.company}</h1>
                             <p>{job_data.location}</p>
                         </div>
-                        <Button onClick={this.handleCompanySite(job_data.company_url)} className="job-company-button">Company Site</Button>
+                        <a href={job_data.company_url} target={job_data.company} className="job-company-button">Company Site</a>
                     </div>
                     <div className="job-detail-section">
-                        <div>
-                            <Moment fromNow>{job_data.created_at}</Moment>
-                            <p>{job_data.type}</p>
+                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                            <div>
+                                <div>
+                                    <p><Moment fromNow>{job_data.created_at}</Moment> - {job_data.type}</p>
+                                </div>
+                                <div>
+                                    <h3>{job_data.title}</h3>
+                                    <p>{job_data.location}</p>
+                                </div>
+                            </div>
+                            <a href={job_data.url} target={job_data.url} className="job-company-button">Apply Now</a>
                         </div>
-                        <div>
-                            <h3>{job_data.title}</h3>
-                            <p>{job_data.location}</p>
-                        </div>
-                        <Button onClick={this.handleApplyNow(job_data.url)}>Apply Now</Button>
                         <div style={{marginTop: "20px"}} dangerouslySetInnerHTML={{__html: job_data.description}}></div> 
                     </div>
                     <div className="job-detail-howtoapply-section">

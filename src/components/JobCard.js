@@ -10,12 +10,12 @@ const JobCard = ({ item, index }) => {
         <div className="job-container">
           <Link to={`/detail/${index}`}>
             <img src={item.company_logo} alt={item.title} className="job-card-company-logo" />
-            <Moment fromNow>{item.created_at}</Moment>
-            <p>{item.type}</p>
+            
+            <h5><Moment fromNow>{item.created_at}</Moment> - {item.type}</h5>
             <h4 className="job-card-title">{item.title}</h4>
-            <p className="job-card-campany">
+            <h5 className="job-card-campany">
               {item.company}
-            </p>
+            </h5>
             <p className="job-card-location">
               {item.location}
             </p>

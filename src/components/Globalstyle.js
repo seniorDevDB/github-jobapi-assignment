@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     transition: all 0.50s linear;
   }
   .App {
@@ -17,8 +17,8 @@ export const GlobalStyles = createGlobalStyle`
   .top-menubar {
     width: 100%;
     background-color: #5964e0;
-    height: 100px;
-    padding: 30px 100px 120px 100px;
+    height: 150px;
+    padding: 30px 100px 0px 100px;
     border-radius: 0px 0px 0px 80px;
     display: flex;
     flex-direction: row;
@@ -67,14 +67,25 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0px 20px 20px;
     border-radius: 10px;
     margin-top: 10px;
+    position: relative;
   }
 
   .job-card a {
     color: ${({ theme }) => theme.cardColor};
+    text-decoration: none;
+  }
+
+  .job-card a h5 {
+    color: #86899c;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: normal;
   }
 
   .job-card .job-card-location {
     color: #5964e0;
+    position: absolute;
+    bottom: 10px;
   }
   
   .card-link {
@@ -177,6 +188,11 @@ export const GlobalStyles = createGlobalStyle`
   .job-detail-page .job-company-button {
     margin-top: auto;
     margin-bottom: auto;
+    text-decoration: none;
+    color: white;
+    background-color: #5964e0;
+    padding: 1rem;
+    border-radius: 10px;
   }
   
   .job-detail-page .job-detail-section {
@@ -189,7 +205,7 @@ export const GlobalStyles = createGlobalStyle`
   .job-detail-page .job-detail-howtoapply-section {
     color: white !important;
     padding: 30px 30px;
-    background-color: #0d6efd;
+    background-color: #5964e0;
     margin-top: 20px;
   }
 

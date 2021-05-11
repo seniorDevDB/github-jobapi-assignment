@@ -4,7 +4,6 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 
 const JobCard = ({ item, index }) => {
-  console.log("here is item", {item})
     return (
       <div className="job-card">
         <div className="job-container">

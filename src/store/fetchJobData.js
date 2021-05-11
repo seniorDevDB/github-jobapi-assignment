@@ -10,7 +10,8 @@ function fetchJobData(data) {
         axios.get(url, {
             // pageNumber: data.pageNumber
             headers: {
-                "Access-Control-Allow-Origin": "*"
+                'Access-Control-Allow-Methods': 'HEAD, GET, POST, PUT, PATCH, DELETE'
+
             }
         }).then(res => {
             console.log("ressss", res.data)

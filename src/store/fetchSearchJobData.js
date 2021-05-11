@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {fetchJobDataPending, fetchJobDataSuccess, fetchJobDataFailed} from './reducers/action';
+import {fetchSearchJobDataSuccess} from './reducers/action';
 
 function fetchSearchJobData(data) {
     return dispatch => {
@@ -10,8 +10,8 @@ function fetchSearchJobData(data) {
             location: data.location,
             full_time: data.full_time
         }).then(res => {
-            console.log("ressss", res.data)
-            dispatch(fetchJobDataSuccess(res.data))
+            console.log("search result", res.data)
+            dispatch(fetchSearchJobDataSuccess(res.data))
         }).catch(err => {
             console.log("error")
         })

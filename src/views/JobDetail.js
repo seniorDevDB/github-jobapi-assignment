@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 import fetchJobData from '../store/fetchJobData';
 
@@ -30,6 +32,10 @@ class JobDetail extends Component {
 
     }
 
+    handleCompanySite = (url) => {
+        // window.location.href=url
+    }
+
     render() {
         console.log("HIHI", this.props.jobData, this.state.jobIndex);
         const job_data = this.props.jobData[this.state.jobIndex]
@@ -45,9 +51,13 @@ class JobDetail extends Component {
                             <h1>{job_data.company}</h1>
                             <p>{job_data.location}</p>
                         </div>
-                        <Button className="job-company-button" style={{paddingRight: "0px"}}>Company Site</Button>
+                        <Button onClick={this.handleCompanySite(job_data.company_url)} className="job-company-button">Company Site</Button>
                     </div>
                     <div className="job-detail-section">
+                        <div>
+                            <Moment fromNow>{job_data.created_at}</Moment>
+                            <p>{job_data.type}</p>
+                        </div>
                         <div>
                             <h3>{job_data.title}</h3>
                             <p>{job_data.location}</p>

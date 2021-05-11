@@ -58,7 +58,7 @@ class Job extends Component {
                         ))
                     }
                 </div>
-                <div style={{textAlign: 'center'}}>
+                <div style={{textAlign: 'center',marginTop: "20px"}}>
                     <Button onClick={this.handleLoadMore}>Load More</Button>
                 </div>
             </div>

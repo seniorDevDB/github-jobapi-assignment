@@ -32,12 +32,12 @@ export function fetchJobDataFailed(error) {
 //     };
 // }
 
-// export function fetchSearchJobDataSuccess(data) {
-//     return {
-//         type: FETCH_SEARCHJOBDATA_SUCCESS,
-//         payload: data
-//     };
-// }
+export function fetchSearchJobDataSuccess(data) {
+    return {
+        type: FETCH_SEARCHJOBDATA_SUCCESS,
+        payload: data
+    };
+}
 
 // export function fetchSearchJobDataFailed(error) {
 //     return {

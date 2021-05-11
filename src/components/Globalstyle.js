@@ -45,6 +45,10 @@ export const GlobalStyles = createGlobalStyle`
   .section-title {
     margin-top: 30px;
   }
+
+  .job-page {
+    padding-bottom: 20px;
+  }
   
   .job-page .job-page-cards {
     display: flex;
@@ -59,13 +63,18 @@ export const GlobalStyles = createGlobalStyle`
   
   .job-card .job-container {
     background-color: ${({ theme }) => theme.cardBack};
-    min-height: 200px;
+    min-height: 250px;
     padding: 0px 20px 20px;
     border-radius: 10px;
+    margin-top: 10px;
   }
 
   .job-card a {
     color: ${({ theme }) => theme.cardColor};
+  }
+
+  .job-card .job-card-location {
+    color: #5964e0;
   }
   
   .card-link {
@@ -86,18 +95,31 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   .searchbar {
-    background-color: white;
+    background-color: ${({ theme }) => theme.cardBack};
+    color: ${({ theme }) => theme.text};
     display: flex;
     height: 80px;
     border-radius: 10px;
     padding: 20px 30px;
   }
+
+  .searchbar input {
+    background-color: ${({ theme }) => theme.cardBack};
+  }
   
   .searchbar-mobile {
     display: none;
+    background-color: ${({ theme }) => theme.cardBack};
+    height: 80px;
+    border-radius: 10px;
+    padding: 20px 30px;
+  }
+
+  .searchbar-mobile .input-group-text {
+    background-color: #5964e0;
   }
   
-  .input-group-text {
+  .searchbar .input-group-text {
     border: none;
     color: deepskyblue;
     background-color: transparent;
@@ -126,7 +148,9 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     height: 200px;
     display: flex;
+    justify-content: space-between;
     margin-top:-30px;
+    padding-right:20px;
   }
 
   .job-detail-page .job-company-detail-section .btn-primary {

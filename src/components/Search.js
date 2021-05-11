@@ -29,7 +29,6 @@ function Search(props) {
             location: location,
             full_time: full_time
         }
-        console.log("dddaatata", data)
         props.fetchSearchJobData(data);
     }
 
@@ -65,8 +64,8 @@ function Search(props) {
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Filter by title..." aria-label="FilterByTitle" aria-describedby="basic-addon" value={title} onChange={(e) => setTitle(e.target.value)}/>
                     <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon">
-                            <SearchIcon/>
+                        <span className="input-group-text" id="basic-addon" onClick={() => handleSearch()}>
+                                <SearchIcon/>
                         </span>
                     </div>
                 </div>

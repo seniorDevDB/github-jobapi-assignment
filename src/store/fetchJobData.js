@@ -4,15 +4,10 @@ import {fetchJobDataPending, fetchJobDataSuccess, fetchJobDataFailed} from './re
 function fetchJobData(data) {
     return dispatch => {
         dispatch(fetchJobDataPending());
-        // const url = process.env.REACT_APP_API_URL + '/getJobsPerPage';
-        const url = "https://jobs.github.com/positions.json";
+        const url = process.env.REACT_APP_API_URL + '/getJobsPerPage';
         console.log("url", url)
-        axios.get(url, {
-            // pageNumber: data.pageNumber
-            headers: {
-                'Access-Control-Allow-Methods': 'HEAD, GET, POST, PUT, PATCH, DELETE'
-
-            }
+        axios.post(url, {
+            pageNumber: data.pageNumber
         }).then(res => {
             console.log("ressss", res.data)
             dispatch(fetchJobDataSuccess(res.data))

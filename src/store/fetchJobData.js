@@ -4,10 +4,11 @@ import {fetchJobDataPending, fetchJobDataSuccess, fetchJobDataFailed} from './re
 function fetchJobData(data) {
     return dispatch => {
         dispatch(fetchJobDataPending());
-        const url = process.env.REACT_APP_API_URL + '/getJobsPerPage';
+        // const url = process.env.REACT_APP_API_URL + '/getJobsPerPage';
+        const url = "https://jobs.github.com/positions.json"
         console.log("url", url)
         axios.post(url, {
-            pageNumber: data.pageNumber
+            // pageNumber: data.pageNumber
         }).then(res => {
             console.log("ressss", res.data)
             dispatch(fetchJobDataSuccess(res.data))
